@@ -9,6 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({ origin: true, credentials: true }));
 app.use(cookieParser());
+app.use(express.static("public"));
 
 mongoose.connect(`mongodb+srv://ramjannadaf487:ramjan123@cluster0.urg7e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
     .then(() => console.log('MongoDB Connected'))
